@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notsapp/customs_widgets/custom_appbar.dart';
-import 'package:notsapp/customs_widgets/note_item.dart';
+
+import '../customs_widgets/notes_list_view.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -12,7 +13,7 @@ class NotesView extends StatelessWidget {
         appBartext: 'Notes',
         appbaricon: Icon(Icons.search , color: Colors.white, size: 30,),
       ),
-     body: NoteItem() ,
+     body: NotesListview() ,
     );
   }
 }
