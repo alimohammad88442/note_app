@@ -8,12 +8,22 @@ class NotesView extends StatelessWidget {
   static String id = 'NotesView';
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(
-        appBartext: 'Notes',
-        appbaricon: Icon(Icons.search , color: Colors.white, size: 30,),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child:  const Icon(Icons.add , size: 40,),
       ),
-     body: NotesListview() ,
+      appBar: const CustomAppBar(
+        appBartext: 'Notes',
+        appbaricon: Icon(
+          Icons.search,
+          color: Colors.white,
+          size: 30,
+        ),
+      ),
+      body: const Column(
+        children: [Expanded(child: NotesListview())],
+      ),
     );
   }
 }

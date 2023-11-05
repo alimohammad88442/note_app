@@ -6,10 +6,9 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25 , vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       child: Container(
-        
-     padding:const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         decoration: BoxDecoration(
             color: Colors.yellowAccent,
             borderRadius: BorderRadius.circular(16)),
@@ -22,7 +21,7 @@ class NoteItem extends StatelessWidget {
                 style: TextStyle(color: Colors.black, fontSize: 25),
               ),
               subtitle: Padding(
-                padding: const EdgeInsets.only( top: 16.0),
+                padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
                   'Builde your career whith ali mohammad',
                   style: TextStyle(color: Colors.black.withOpacity(0.4)),
@@ -37,10 +36,12 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
             ),
-            
-            const Padding(
-              padding: EdgeInsets.only( right: 24.0),
-              child: Text('may 5,2023'),
+            Padding(
+              padding: const EdgeInsets.only(right: 24.0),
+              child: Text(
+                'may 5,2023',
+                style: TextStyle(color: Colors.black.withOpacity(0.4)),
+              ),
             ),
           ],
         ),
