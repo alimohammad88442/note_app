@@ -9,8 +9,8 @@ class EditNoteViewBody extends StatelessWidget {
     return const Column(
       children: [
         CustomTextField(text: 'title' , height: 1,),
-        CustomTextField(text: 'body' , height: 4,)
-
+        SizedBox(height: 16),
+        CustomTextField(text: 'content' , height: 5,),
       ],
     ) ;
   }

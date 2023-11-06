@@ -5,12 +5,18 @@ import '../customs_widgets/edit_note_view_body.dart';
 
 class EditNoteView extends StatelessWidget {
   const EditNoteView({super.key});
-
+  static String id = 'EditPage';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(appBartext: 'Edit', appbaricon:Icon(Icons.abc),),
-      body: EditNoteViewBody() ,
+      appBar: CustomAppBar(
+        appBartext: 'Edit',
+        appbaricon: Icon(Icons.check),
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25),
+        child: EditNoteViewBody(),
+      ),
     );
   }
 }

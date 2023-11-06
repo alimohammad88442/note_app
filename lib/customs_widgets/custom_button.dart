@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notsapp/constantes.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  const CustomButton({super.key, });
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       ),
       width: MediaQuery.of(context).size.width,
       height: 50,
-      child:const Center(child: Text('add'),)
+      child: const Center(child: Text('add'),)
     );
   }
 }
