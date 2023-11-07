@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
               height: 50,
               child: const Center(
                 child: Text('add'),
-              )),
+              ),),
         );
       },
     );

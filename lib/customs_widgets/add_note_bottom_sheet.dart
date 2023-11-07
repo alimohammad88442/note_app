@@ -9,7 +9,7 @@ class AddNoateBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AddNoteCubit (),
+      create: (context) => AddNoteCubit(),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
@@ -21,7 +21,9 @@ class AddNoateBottomSheet extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            return const SingleChildScrollView(child: Newwidget());
+            return AbsorbPointer(
+                absorbing: state is AddNoteLoaging ? true : false,
+                child: const SingleChildScrollView(child: Newwidget(),),);
           },
         ),
       ),
