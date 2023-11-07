@@ -11,7 +11,12 @@ class AddNoateBottomSheet extends StatelessWidget {
     return BlocProvider(
       create: (context) => AddNoteCubit(),
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.only(
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: MediaQuery.of(context).viewInsets.bottom
+            ),
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
             if (state is AddNotefailure) {
@@ -22,8 +27,11 @@ class AddNoateBottomSheet extends StatelessWidget {
           },
           builder: (context, state) {
             return AbsorbPointer(
-                absorbing: state is AddNoteLoaging ? true : false,
-                child: const SingleChildScrollView(child: Newwidget(),),);
+              absorbing: state is AddNoteLoaging ? true : false,
+              child: const SingleChildScrollView(
+                child: Newwidget(),
+              ),
+            );
           },
         ),
       ),

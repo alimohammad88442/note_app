@@ -13,16 +13,19 @@ class CustomButton extends StatelessWidget {
     return BlocConsumer<AddNoteCubit, AddNoteState>(
       listener: (context, state) {},
       builder: (context, state) {
-        return GestureDetector(
-          onTap: onTap,
-          child: state is AddNoteLoaging ? const CircularProgressIndicator() : Container(
-              decoration: BoxDecoration(
-                  color: kprimarycolor, borderRadius: BorderRadius.circular(8)),
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              child: const Center(
-                child: Text('add'),
-              ),),
+        return Padding(
+          padding: const EdgeInsets.only( bottom: 20),
+          child: GestureDetector(
+            onTap: onTap,
+            child: state is AddNoteLoaging ? const CircularProgressIndicator() : Container(
+                decoration: BoxDecoration(
+                    color: kprimarycolor, borderRadius: BorderRadius.circular(8)),
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                child: const Center(
+                  child: Text('add'),
+                ),),
+          ),
         );
       },
     );
