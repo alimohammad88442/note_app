@@ -6,7 +6,7 @@ import 'package:notsapp/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
-  Hive.openBox(kNotbox);
+ await Hive.openBox(kNotbox);
   runApp(const NoteApp());
 }
 

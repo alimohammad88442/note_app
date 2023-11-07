@@ -11,6 +11,7 @@ final   Icon appbaricon;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor:const Color(0xff303030),
         elevation: 0,
         title: Text(appBartext,style: const TextStyle(fontSize: 30),),
