@@ -7,7 +7,9 @@ final class AddNoteInitial extends AddNoteState {}
 
 final class AddNoteLoaging extends AddNoteState {}
 
-final class AddNotSuccess extends AddNoteState {}
+final class AddNotSuccess extends AddNoteState {
+
+}
 
 final class AddNotefailure extends AddNoteState {
   final String errmessage;
