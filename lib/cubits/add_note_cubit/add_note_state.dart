@@ -5,7 +5,7 @@ sealed class AddNoteState {}
 
 final class AddNoteInitial extends AddNoteState {}
 
-final class AddNoteLoaginf extends AddNoteState {}
+final class AddNoteLoaging extends AddNoteState {}
 
 final class AddNotSuccess extends AddNoteState {}
 
