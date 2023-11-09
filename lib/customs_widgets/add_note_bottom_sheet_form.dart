@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notsapp/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notsapp/cubits/notes_cubit/notes_cubit.dart';
+import 'package:notsapp/customs_widgets/colors_list_view.dart';
 import 'package:notsapp/customs_widgets/custom_button.dart';
 import 'package:notsapp/customs_widgets/custom_text_field.dart';
 import 'package:notsapp/models/note_model.dart';
@@ -38,6 +39,8 @@ class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
             height: 4,
             onSaved: (value) => subTitle = value,
           ),
+         const SizedBox(height: 20,),
+        const  ColorListViwe(),
           const SizedBox(
             height: 20,
           ),
