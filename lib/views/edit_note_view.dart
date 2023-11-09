@@ -10,11 +10,8 @@ class EditNoteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     NoteModel note = ModalRoute.of(context)!.settings.arguments as NoteModel;
-    return Padding(
-        padding:const EdgeInsets.symmetric(horizontal: 25),
-        child: EditNoteViewBody(
-          notes: note,
-        ),
-      );
+    return EditNoteViewBody(
+      notes: note,
+    );
   }
 }
