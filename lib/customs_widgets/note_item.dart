@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+
 import 'package:notsapp/models/note_model.dart';
 
 import 'package:notsapp/views/edit_note_view.dart';
@@ -35,7 +37,10 @@ class NoteItem extends StatelessWidget {
                   ),
                 ),
                 trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    notes.delete();
+                   
+                  },
                   icon: const Icon(
                     Icons.delete,
                     color: Colors.black,

@@ -20,7 +20,6 @@ class AddNoateBottomSheet extends StatelessWidget {
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
             if (state is AddNotefailure) {
-              print('failure');
             } else if (state is AddNotSuccess) {
               Navigator.pop(context);
             }
