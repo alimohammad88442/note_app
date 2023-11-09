@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notsapp/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:notsapp/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notsapp/customs_widgets/custom_button.dart';
 import 'package:notsapp/customs_widgets/custom_text_field.dart';
 import 'package:notsapp/models/note_model.dart';
@@ -51,6 +52,7 @@ class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
                   color: Colors.red.value,
                 );
                 BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
+                BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               } else {
                 autovalidateMode = AutovalidateMode.always;
                 setState(() {});
