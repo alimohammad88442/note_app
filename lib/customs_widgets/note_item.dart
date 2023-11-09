@@ -35,7 +35,7 @@ class NoteItem extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Text(
                     notes.subtitle,
-                    style: TextStyle(color: Colors.black.withOpacity(0.4)),
+                    style:const TextStyle(color: Colors.black , fontSize: 18 , fontWeight: FontWeight.bold),
                   ),
                 ),
                 trailing: IconButton(
@@ -54,7 +54,7 @@ class NoteItem extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 24.0),
                 child: Text(
                   notes.data,
-                  style: TextStyle(color: Colors.black.withOpacity(0.4)),
+                  style: const TextStyle(color: Colors.black, fontSize: 18 ,fontWeight: FontWeight.bold),
                 ),
               ),
             ],

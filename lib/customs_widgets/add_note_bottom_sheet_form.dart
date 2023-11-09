@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:notsapp/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notsapp/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notsapp/customs_widgets/colors_list_view.dart';
@@ -39,8 +40,10 @@ class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
             height: 4,
             onSaved: (value) => subTitle = value,
           ),
-         const SizedBox(height: 20,),
-        const  ColorListViwe(),
+          const SizedBox(
+            height: 20,
+          ),
+          const ColorListViwe(),
           const SizedBox(
             height: 20,
           ),
@@ -48,10 +51,12 @@ class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
             onTap: () {
               if (formkey.currentState!.validate()) {
                 formkey.currentState!.save();
+                var now = DateTime.now();
+                var formatter = DateFormat('MM-dd');
                 var noteModel = NoteModel(
                   title: title!,
                   subtitle: subTitle!,
-                  data: DateTime.now().toString(),
+                  data: formatter.format(now).toString(),
                   color: Colors.red.value,
                 );
                 BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
