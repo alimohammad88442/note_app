@@ -29,7 +29,7 @@ class AddNoateBottomSheet extends StatelessWidget {
             return AbsorbPointer(
               absorbing: state is AddNoteLoaging ? true : false,
               child: const SingleChildScrollView(
-                child: Newwidget(),
+                child: NoteButtomSheetForm(),
               ),
             );
           },

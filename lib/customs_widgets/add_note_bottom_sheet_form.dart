@@ -5,16 +5,16 @@ import 'package:notsapp/customs_widgets/custom_button.dart';
 import 'package:notsapp/customs_widgets/custom_text_field.dart';
 import 'package:notsapp/models/note_model.dart';
 
-class Newwidget extends StatefulWidget {
-  const Newwidget({
+class NoteButtomSheetForm extends StatefulWidget {
+  const NoteButtomSheetForm({
     super.key,
   });
 
   @override
-  State<Newwidget> createState() => _NewwidgetState();
+  State<NoteButtomSheetForm> createState() => _NoteButtomSheetFormState();
 }
 
-class _NewwidgetState extends State<Newwidget> {
+class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
   final GlobalKey<FormState> formkey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title, subTitle;
