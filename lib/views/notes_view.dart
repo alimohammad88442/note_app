@@ -14,7 +14,7 @@ class NotesView extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         appBartext: 'Notes',
-        appbaricon: Icon(
+        appBaricon: Icon(
           Icons.search,
           color: Colors.white,
           size: 30,

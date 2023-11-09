@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:notsapp/customs_widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
- const CustomAppBar({super.key,required this.appBartext,required this.appbaricon});
+ const CustomAppBar({super.key,required this.appBartext,required this.appBaricon, this.ontap});
  final String appBartext;
-final   Icon appbaricon;
-
+final   Icon appBaricon;
+final void Function()? ontap;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +17,7 @@ final   Icon appbaricon;
         title: Text(appBartext,style: const TextStyle(fontSize: 30),),
         actions: [
           
-         CustomSearchIcon(icon: appbaricon),
+         CustomAppBarIcon(icon: appBaricon , ontap: ontap ,),
         ],
       ),
     );
