@@ -44,7 +44,12 @@ class _NoteButtomSheetFormState extends State<NoteButtomSheetForm> {
             onTap: () {
               if (formkey.currentState!.validate()) {
                 formkey.currentState!.save();
-                var noteModel = NoteModel(title: title!, subtitle: subTitle!, data: DateTime.now().toString(), color: Colors.black.value);
+                var noteModel = NoteModel(
+                  title: title!,
+                  subtitle: subTitle!,
+                  data: DateTime.now().toString(),
+                  color: Colors.red.value,
+                );
                 BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
               } else {
                 autovalidateMode = AutovalidateMode.always;
